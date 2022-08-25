@@ -53,5 +53,9 @@ class Analyzer:
             
         return max(org_dict, key=org_dict.get)
         
-    def parse(self):
-        return self.get_most_recent_organization(self.get_organizations(self.text))
+    def parse(self) -> str:
+        orgs = self.get_organizations(self.text)
+        if orgs:
+            return self.get_most_recent_organization(orgs)
+        else:
+            return ''
