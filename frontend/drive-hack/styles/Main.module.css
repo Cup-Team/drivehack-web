@@ -1,0 +1,40 @@
+.card,
+.mainWrapper,
+.stats,
+.statsWrapper {
+  display: flex;
+}
+
+.mainWrapper {
+  margin: 5vw;
+}
+
+.card {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 25vh;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.additional {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+  padding: 21px 31px;
+  background-color: var(--nav-color);
+  border-radius: 218px;
+}
+
+.stats {
+  align-items: center;
+}
+
+.statsWrapper {
+  justify-content: space-between;
+}
