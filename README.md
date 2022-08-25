@@ -1,2 +1,2 @@
-# drivehack-web
-WEB for drivehack second case
+# DriveHack CupTeam Repo
+
