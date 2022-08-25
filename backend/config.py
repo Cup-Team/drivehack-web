@@ -5,7 +5,6 @@ from decouple import config
 
 
 class Settings(BaseSettings):
-    API_V1_STR = "/api/v1"
     POSTGRES_DB: str = config("POSTGRES_DB")
     POSTGRES_USER: str = config("POSTGRES_USER")
     POSTGRES_PASSWORD: str = config("POSTGRES_PASSWORD")
