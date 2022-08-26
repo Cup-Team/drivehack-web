@@ -20,4 +20,4 @@ async def db_load():
     await init_db()
 
 
-app.include_router(router, prefix="/api/v1")
+app.include_router(router)

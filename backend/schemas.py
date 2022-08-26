@@ -18,6 +18,17 @@ class LinkObj(BaseModel):
     link: str
     date: date | None
 
+
 class MentionBase(BaseModel):
     startup_id: int
     links: List[LinkObj]
+
+
+class StartupBase(BaseModel):
+    id: int
+    title: str
+    descripiton: str | None
+    country : str | None
+    link: str | None
+    img_link: str | None
+    
