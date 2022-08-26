@@ -7,7 +7,9 @@ class Startup(Model):
     title = fields.CharField(max_length=300, unique=True)
     description = fields.TextField(null=True)
     country = fields.CharField(max_length=300, null=True)
-
+    link = fields.CharField(max_length=300, null=True)
+    img_link = fields.CharField(max_length=300, null=True)
+    
     def __str__(self):
         return self.title
 
