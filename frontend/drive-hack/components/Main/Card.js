@@ -5,7 +5,8 @@ const Card = ({ title, description, mentions, media }) => {
   return (
     <div className={styles.card}>
       <div>
-        <h2 style={{ marginBottom: "1vw" }}>{title}</h2> <p>{description}</p>
+        <h2 style={{ marginBottom: "1vw" }}>{title}</h2>{" "}
+        <p className={styles.description}>{description}</p>
       </div>
       <div className={styles.statsWrapper}>
         <div className={styles.stats}>

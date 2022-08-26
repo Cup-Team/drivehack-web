@@ -6,7 +6,10 @@ const Button = ({ id }) => {
   return (
     <Link href={`startup/${id}/`}>
       <div className={styles.additional}>
-        Подробнее <Image src="/arrow.svg" width={128} height={18} />
+        Подробнее{" "}
+        <div className={styles.arrow}>
+          <Image src="/arrow.svg" layout="fill" />
+        </div>
       </div>
     </Link>
   );
