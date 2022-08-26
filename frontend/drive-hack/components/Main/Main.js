@@ -5,7 +5,7 @@ import Card from "./Card.js";
 import Header from "./Header";
 
 const Main = () => {
-  const url = "http://localhost:8000/startups/";
+  const url = "api/startups/";
   const fetcher = async () => {
     const startups = await axios.get(url);
     return startups.data;
@@ -14,8 +14,6 @@ const Main = () => {
 
   if (!data) return <></>;
   return (
-    <div>
-      <Header />
       <div className={styles.mainWrapper}>
         {data.map(({ title, description, mentions, media }, index) => (
           <Card
@@ -27,7 +25,6 @@ const Main = () => {
           />
         ))}
       </div>
-    </div>
   );
 };
 
