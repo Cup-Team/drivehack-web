@@ -1,0 +1,79 @@
+:root {
+  --nav-color: #171717;
+  --bg-color: #eff2f7;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/font/Inter-Medium.woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/font/Inter-Regular.woff2");
+  font-weight: 400;
+}
+
+html,
+body,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h2,
+p,
+a {
+  font-family: "Inter";
+  font-style: normal;
+}
+
+mark {
+  background-color: transparent;
+}
+
+mark,
+h2,
+a {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+main,
+aside {
+  display: flex;
+}
+
+aside {
+  flex-direction: column;
+  width: fit-content;
+  padding: 20px;
+  height: 100vh;
+  background-color: var(--nav-color);
+}
+
+a {
+  line-height: 29px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
