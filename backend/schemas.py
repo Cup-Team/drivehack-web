@@ -19,10 +19,16 @@ class LinkObj(BaseModel):
     date: date | None
 
 
-class MentionBase(BaseModel):
+class MentionsBase(BaseModel):
     startup_id: int
     links: List[LinkObj]
 
+
+class MentionBase(BaseModel):
+    title: str
+    link: str 
+    date: date
+    startup_id: int
 
 class StartupBase(BaseModel):
     title: str

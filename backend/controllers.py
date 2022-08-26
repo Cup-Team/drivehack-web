@@ -8,7 +8,7 @@ from fastapi.exceptions import HTTPException
 router = APIRouter()
 
 
-@router.post("/text")
+@router.post("/startup")
 async def get_or_create_startup(data: ParserData):
     ananlyzer = Analyzer(f"""{data.text}""")
     startup_title = ananlyzer.parse()
@@ -30,7 +30,13 @@ async def get_or_create_mentions(data: MentionBase):
     return {"success": True}
 
 
-@router.post("/startup")
+@router.post("/mention/force")
+async def get_or_create_mention(data: MentionBase):
+    await Mention.get_or_create(**data)
+    return {"success": True}
+
+
+@router.post("/startup/force")
 async def get_or_create_startup(data: StartupBase):
     await Startup.get_or_create(**data.dict())
     return {"success": True}
