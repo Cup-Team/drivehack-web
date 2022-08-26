@@ -13,7 +13,7 @@ const Card = ({ title, description, mentions, media }) => {
           <p style={{ marginRight: "2vw" }}>
             <mark>{mentions}</mark> упомининий
           </p>
-          <p>
+          <p style={{ display: "none" }}>
             <mark>{media}</mark> сми
           </p>
         </div>

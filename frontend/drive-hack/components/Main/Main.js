@@ -4,7 +4,7 @@ import useSWR from "swr";
 import Card from "./Card.js";
 
 const Main = () => {
-  const url = "/api/startups/";
+  const url = "http://localhost:8000/startups/";
   const fetcher = async () => {
     const startups = await axios.get(url);
     return startups.data;
