@@ -36,8 +36,11 @@ class Analyzer:
         for org in orgs_set:
             for next_org in orgs_set:
                 if org in next_org and len(next_org) > len(org):
-                    standartisite_orgs_set.remove(next_org)
-                    orgs.append(org)
+                    try:
+                        standartisite_orgs_set.remove(next_org)
+                        orgs.append(org)
+                    except KeyError:
+                        pass
                     
         standartisite_orgs_list = []
         for org in orgs:
