@@ -12,7 +12,6 @@ const Main = () => {
   const { data, _ } = useSWR(url, fetcher);
 
   if (!data) return <></>;
-  console.log(data);
   return (
     <div className={styles.mainWrapper}>
       {data.map(({ title, description, mentions, media }, index) => (

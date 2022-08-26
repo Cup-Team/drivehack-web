@@ -60,6 +60,7 @@ aside {
 aside {
   flex-direction: column;
   width: fit-content;
+  padding: 20px;
   height: 100vh;
   background-color: var(--nav-color);
 }
@@ -74,5 +75,5 @@ a {
 nav {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-top: 20px;
 }
