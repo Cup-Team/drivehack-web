@@ -6,11 +6,48 @@ services:
       POSTGRES_DB: "pied_piper"
       POSTGRES_USER: "pied_piper"
       POSTGRES_PASSWORD: "pied_piper"
-    container_name: postgres_db
+    restart: unless-stopped
     volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
+      - ./postgres:/var/lib/postgresql/data
 
-volumes:
-  pgdata:
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   restart: unless-stopped
+  #   links:
+  #     - db
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: "admin@team.cupsoft.ru"
+  #     PGADMIN_DEFAULT_PASSWORD: "pied_piper"
+  #     PGADMIN_LISTEN_PORT: "5050"
+  #   volumes:
+  #      - ./postgres-pgadmin:/var/lib/pgadmin
+  #   ports:
+  #     - "5050:5050"
+
+  api:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    env_file:
+      - backend/.env
+    restart: unless-stopped
+    links:
+      - db
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+
+  web:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    links:
+      - api
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
