@@ -24,7 +24,6 @@ class StartupBase(BaseModel):
     country : str | None
     link: str | None
     img_link: str | None
-    date: date
     
 
 class StartupResposne(BaseModel):
@@ -33,5 +32,4 @@ class StartupResposne(BaseModel):
     country : str | None
     link: str | None
     img_link: str | None
-    date: date
     mentions: int
