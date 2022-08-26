@@ -1,11 +1,12 @@
 from fastapi import APIRouter
 from datetime import date
 from logic import Analyzer
-from schemas import MentionBase, ParserData, MentionBase, StartupBase, MentionsBase
+from schemas import MentionBase, ParserData, MentionBase, StartupBase, StartupResposne
 from models import Startup, Mention
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.exceptions import HTTPException
-
+from file import write_csv
+from typing import List
 router = APIRouter()
 
 
@@ -19,7 +20,7 @@ async def get_startups(end: date, start: date):
     return res
 
 
-@router.post("/startups")
+@router.post("/startups", response_model=List[StartupResposne])
 async def get_or_create_startup(data: ParserData):
     ananlyzer = Analyzer(f"""{data.text}""")
     startup_title = ananlyzer.parse()
@@ -43,6 +44,11 @@ async def get_or_create_startup(data: ParserData):
         status_code=status,
     )
 
+
+@router.get("/sartups/file")
+async def get_startups_in_file(end: date, start: date):
+    await write_csv(end, start)
+    return FileResponse('./startups.csv')
 
 
 @router.post("/mention/force")

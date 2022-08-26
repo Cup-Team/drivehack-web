@@ -11,10 +11,6 @@ class ParserData(BaseModel):
     link: str 
     img_link: str | None
 
-class QueryParameters(BaseModel):
-    start_date: date
-    end_date: date
-
 
 class MentionBase(BaseModel):
     title: str
@@ -30,3 +26,12 @@ class StartupBase(BaseModel):
     img_link: str | None
     date: date
     
+
+class StartupResposne(BaseModel):
+    title: str
+    description: str | None
+    country : str | None
+    link: str | None
+    img_link: str | None
+    date: date
+    mentions: int
