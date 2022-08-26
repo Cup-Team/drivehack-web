@@ -18,7 +18,7 @@ async def get_or_create_startup(data: ParserData):
         title=startup_title, description=data.text, country=data.country
     )
     status = 201 if startup_obj[1] else 200
-    return JSONResponse({"startup_id": startup_obj[0].id}, status_code=status)
+    return JSONResponse({"startup_id": startup_obj[0].id, "startup_title": startup_obj[0].title}, status_code=status)
 
 
 
