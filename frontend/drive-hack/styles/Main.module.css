@@ -52,3 +52,10 @@
   text-overflow: ellipsis;
   margin-bottom: 30px;
 }
+.header{
+  width: 100%;
+}
+
+.download{
+  float: right;
+}

@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:14.4
+    environment:
+      POSTGRES_DB: "pied_piper"
+      POSTGRES_USER: "pied_piper"
+      POSTGRES_PASSWORD: "pied_piper"
+    container_name: postgres_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  pgdata:

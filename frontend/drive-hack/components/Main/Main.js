@@ -1,6 +1,7 @@
 import axios from "redaxios";
 import useSWR from "swr";
 import Card from "./Card.js";
+import Header from "./Header";
 
 const Main = () => {
   const url = "api/startups/";
@@ -12,17 +13,20 @@ const Main = () => {
 
   if (!data) return <></>;
   return (
-    <>
-      {data.map(({ title, description, mentions, media }, index) => (
-        <Card
-          title={title}
-          description={description}
-          mentions={mentions}
-          media={media}
-          key={index}
-        />
-      ))}
-    </>
+    <div>
+      <Header />
+      <div className={styles.mainWrapper}>
+        {data.map(({ title, description, mentions, media }, index) => (
+          <Card
+            title={title}
+            description={description}
+            mentions={mentions}
+            media={media}
+            key={index}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
