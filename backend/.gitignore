@@ -161,3 +161,5 @@ cython_debug/
 
 test-data/
 docker-compose-dev.yml
+
+startups.csv
