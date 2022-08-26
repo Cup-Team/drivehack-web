@@ -1,4 +1,3 @@
-import requests
+from modules import techcrunch
 
-from bs4 import BeautifulSoup
-
+techcrunch.parse()
