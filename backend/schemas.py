@@ -25,9 +25,8 @@ class MentionBase(BaseModel):
 
 
 class StartupBase(BaseModel):
-    id: int
     title: str
-    descripiton: str | None
+    description: str | None
     country : str | None
     link: str | None
     img_link: str | None

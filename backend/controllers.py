@@ -32,5 +32,5 @@ async def get_or_create_mentions(data: MentionBase):
 
 @router.post("/startup")
 async def get_or_create_startup(data: StartupBase):
-    await Startup.get_or_create(**data)
+    await Startup.get_or_create(**data.dict())
     return {"success": True}
