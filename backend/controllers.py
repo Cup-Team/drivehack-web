@@ -46,7 +46,7 @@ async def get_or_create_startup(data: ParserData):
                     title=data.title,
                     link=data.link,
                     date=data.date,
-                    startup_id=startup_obj[0].id,
+                    startup_id=startup_obj[0],
                 )
             except IntegrityError:
                 raise HTTPException(status_code=409, detail='Mention already exists')
