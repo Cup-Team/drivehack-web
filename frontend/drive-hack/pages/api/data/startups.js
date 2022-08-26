@@ -1,9 +1,39 @@
 export const startups = [
   {
-    title: "Smth - a startup that runs from investors and needs nothing.",
+    title:
+      "Электромобили Arrival похожи на Lego: как устроены микрофабрики, роботы и модульные машины Дениса Свердлова",
     description:
-      "Notion is a relatively new service for creating notes and text documents, to-do lists, databases, spreadsheets, kanban boards, knowledge bases, project management and collaboration. Investors value Notion Labs at $2 billion, so...",
-    mentions: 132,
-    media: 90,
+      "Компания строит дешёвые электрофургоны, отказывается от крупных заводов и хочет составить конкуренцию Ford и General Motors. Что происходит внутри неё — в пересказе Wired...",
+    mentions: 105,
+    media: 28,
+  },
+  {
+    title:
+      "В столице проходит тест новая технология для сокращения пробок Edge Vision",
+    description:
+      "Технология для сокращения заторов Edge Vision разработана на базе проекта «Транспортные инновации Москвы». Система анализирует трафик и сама регулирует светофоры. В ходе первых испытаний уже можно...",
+    mentions: 37,
+    media: 5,
+  },
+  {
+    title: "Wanderu",
+    description:
+      "Это самый простой способ найти и забронировать поездку на автобусе и поезде из точки А в точку Б. Мы являемся ведущим рынком, который стимулирует продажи на североамериканском рынке наземных путешествий в размере 20,6 млрд долларов...",
+    mentions: 22,
+    media: 3,
+  },
+  {
+    title: "WalletKit",
+    description:
+      "Это центральная платформа для бизнеса для создания, управления и доставки цифровых посадочных талонов, билетов, карт магазинов, купонов для мобильных кошельков, таких как Apple Passbook, Google Wallet...",
+    mentions: 62,
+    media: 43,
+  },
+  {
+    title: "WHILL",
+    description:
+      "Разрабатывает и создает персональные мобильные устройства следующего поколения, которые делают езду по тротуарам легкой, стильной и веселой. Поскольку WHILL является персональным мобильным устройством для всех, нет необходимости получать рецепт для покупки...",
+    mentions: 24,
+    media: 7,
   },
 ];

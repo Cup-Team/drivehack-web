@@ -61,7 +61,7 @@ aside {
   flex-direction: column;
   width: fit-content;
   padding: 20px;
-  height: 100vh;
+  height: 1600px;
   background-color: var(--nav-color);
 }
 
