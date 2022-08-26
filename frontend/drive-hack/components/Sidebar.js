@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
             ))}
           </nav>
         </aside>
-        {children}
+        <div className={styles.mainWrapper}>{children}</div>
       </main>
     </>
   );

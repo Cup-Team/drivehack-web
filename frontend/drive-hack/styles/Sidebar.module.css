@@ -1,6 +1,7 @@
-/* .logo {
-  margin: 30px;
-} */
+.mainWrapper {
+  display: flex;
+  margin: 50px;
+}
 
 .activeLink {
   text-decoration-line: underline;

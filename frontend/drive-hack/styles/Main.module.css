@@ -1,13 +1,8 @@
 .card,
-.mainWrapper,
 .stats,
 .statsWrapper,
 .additional {
   display: flex;
-}
-
-.mainWrapper {
-  margin: 50px;
 }
 
 .card {
