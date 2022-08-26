@@ -4,7 +4,7 @@ from tortoise import fields
 
 class Startup(Model):
     id = fields.IntField(pk=True)
-    title = fields.CharField(max_length=300, unique=True)
+    title = fields.CharField(max_length=300)
     description = fields.TextField(null=True)
     country = fields.CharField(max_length=300, null=True)
     link = fields.CharField(max_length=300, null=True)

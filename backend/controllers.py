@@ -42,7 +42,7 @@ async def get_or_create_startup(data: ParserData):
         )
         status = 201 if startup_obj[1] else 200
         if not startup_obj[1]:
-            try: 
+            try:
                 await Mention.create(
                     title=data.title,
                     link=data.link,
@@ -50,7 +50,7 @@ async def get_or_create_startup(data: ParserData):
                     startup_id=startup_obj[0],
                 )
             except IntegrityError:
-                raise HTTPException(status_code=409, detail='Mention already exists')
+                raise HTTPException(status_code=409, detail="Mention already exists")
         return JSONResponse(
             {"startup_id": startup_obj[0].id, "startup_title": startup_obj[0].title},
             status_code=status,
@@ -63,6 +63,16 @@ async def get_or_create_startup(data: ParserData):
 async def get_startups_in_file(end: date, start: date):
     await write_csv(end, start)
     return FileResponse("./startups.csv")
+
+
+@router.get("/mention/force")
+async def get_all_mentions():
+    return await Mention.all()
+
+
+@router.get("/startup/force")
+async def get_all_startups():
+    return await Startup.all()
 
 
 @router.post("/mention/force")
