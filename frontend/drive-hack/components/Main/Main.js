@@ -15,17 +15,15 @@ const Main = () => {
   return (
     <div>
       <Header />
-      <div className={styles.mainWrapper}>
-        {data.map(({ title, description, mentions, media }, index) => (
-          <Card
-            title={title}
-            description={description}
-            mentions={mentions}
-            media={media}
-            key={index}
-          />
-        ))}
-      </div>
+      {data.map(({ title, description, mentions, media }, index) => (
+        <Card
+          title={title}
+          description={description}
+          mentions={mentions}
+          media={media}
+          key={index}
+        />
+      ))}
     </div>
   );
 };

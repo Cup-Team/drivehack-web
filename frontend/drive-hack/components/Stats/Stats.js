@@ -17,21 +17,13 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const labels = [
-  "Lit Motors",
-  "Hammerhead",
-  "Boxbee",
-  "Faraday Bicycles",
-  "Moveline",
-  "Mozio",
-  "Shutl",
-];
+const labels = ["Arrival", "Edge Vision", "Wanderu", "WalletKit", "WHILL"];
 const data = {
   labels: labels,
   datasets: [
     {
       label: "Transport startups",
-      data: [12, 7, 5, 8, 3, 6, 7],
+      data: [105, 37, 22, 62, 24],
       backgroundColor: "#652FFF",
     },
   ],

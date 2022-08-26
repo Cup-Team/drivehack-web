@@ -11,9 +11,9 @@ const Card = ({ title, description, mentions, media }) => {
       <div className={styles.statsWrapper}>
         <div className={styles.stats}>
           <p style={{ marginRight: "2vw" }}>
-            <mark>{mentions}</mark> упомининий
+            <mark>{mentions}</mark> упоминаний
           </p>
-          <p style={{ display: "none" }}>
+          <p>
             <mark>{media}</mark> сми
           </p>
         </div>

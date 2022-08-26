@@ -1,8 +1,8 @@
 .mainWrapper {
   display: flex;
-  margin: 50px;
+  margin: 40px;
 }
 
 .activeLink {
-  text-decoration-line: underline;
+  text-decoration: underline;
 }

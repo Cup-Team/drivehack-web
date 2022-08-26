@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const navigation = [
   { id: 1, title: "Главная", path: "/" },
-  { id: 2, title: "Статистика", path: "/stats/" },
+  { id: 2, title: "Статистика", path: "/stats" },
 ];
 
 const Sidebar = ({ children }) => {

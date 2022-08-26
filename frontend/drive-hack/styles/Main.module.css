@@ -52,10 +52,14 @@
   text-overflow: ellipsis;
   margin-bottom: 30px;
 }
-.header{
-  width: 100%;
+
+.header {
+  margin-bottom: 100px;
 }
 
-.download{
+.download {
   float: right;
+  background-color: var(--nav-color);
+  border-radius: 218px;
+  padding: 21px 33px;
 }
