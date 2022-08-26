@@ -41,12 +41,16 @@ async def get_or_create_startup(data: ParserData):
             img_link=data.img_link,
         )
         status = 201 if startup_obj[1] else 200
-        await Mention.create(
-            title=data.title,
-            link=data.link,
-            date=data.date,
-            startup_id=startup_obj[0].id,
-        )
+        if not startup_obj[1]:
+            try: 
+                await Mention.create(
+                    title=data.title,
+                    link=data.link,
+                    date=data.date,
+                    startup_id=startup_obj[0],
+                )
+            except IntegrityError:
+                raise HTTPException(status_code=409, detail='Mention already exists')
         return JSONResponse(
             {"startup_id": startup_obj[0].id, "startup_title": startup_obj[0].title},
             status_code=status,
