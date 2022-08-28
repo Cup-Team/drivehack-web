@@ -1,0 +1,65 @@
+.card,
+.stats,
+.statsWrapper,
+.additional {
+  display: flex;
+}
+
+.card {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.additional {
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  padding: 15px 30px;
+  background-color: var(--nav-color);
+  border-radius: 218px;
+  align-items: center;
+}
+
+.stats {
+  align-items: center;
+}
+
+.statsWrapper {
+  justify-content: space-between;
+}
+
+.arrow {
+  position: relative;
+  width: 128px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+.description {
+  width: 100%;
+  max-height: calc(22px * 3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 30px;
+}
+
+.header {
+  margin-bottom: 100px;
+}
+
+.download {
+  float: right;
+  background-color: var(--nav-color);
+  border-radius: 218px;
+  padding: 21px 33px;
+}
